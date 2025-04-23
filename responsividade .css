@@ -1,0 +1,78 @@
+/* Mobile */
+@media (max-width: 768px) {
+    
+    #msg-principal > #animacao-digitacao  {
+        font-size: 0.65em;
+    }
+    
+    #msg-principal > h1 {
+        font-size: 0.8em;
+        margin-left: 15px;
+    }
+    #redes-sociais > a > img {
+        max-width: 35px;
+        max-height: 35px;
+        margin: 10px;
+    }
+    .titulo {
+        font-size: 0.5em;
+
+    }
+    #habilidades > .titulo {
+        font-size: 0.48em;
+        margin-top: -40px;
+    }
+    #p-sobremim {
+        font-size: 0.9em;
+        width: 350px;
+        margin-top: -30px;
+    }
+    .resp-display {
+        display: none;
+    }
+    .passar {
+        font-size: 3em;
+    }
+    #contato-email {
+        font-size: 0.7em;
+    }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #msg-principal > #animacao-digitacao  {
+        font-size: 1em;
+    }
+    
+    #msg-principal > h1 {
+        font-size: 1em;
+        margin-left: 15px;
+    }
+    #redes-sociais > a > img {
+        max-width: 50px;
+        max-height: 50px;
+        margin: 15px;
+    }
+    .titulo {
+        font-size: 1em;
+
+    }
+    #habilidades > .titulo {
+        font-size: 1em;
+        margin-top: -40px;
+    }
+    #p-sobremim {
+        font-size: 1.2em;
+        width: 700px;
+        margin-top: -30px;
+    }
+    .resp-display {
+        display: none;
+    }
+    .passar {
+        font-size: 4em;
+    }
+    #contato-email {
+        font-size: 1em;
+    }
+}
