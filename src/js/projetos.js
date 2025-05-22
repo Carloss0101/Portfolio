@@ -1,37 +1,52 @@
 const projetos = [
-  { 
-      nome: "Lista de Tarefas", 
-      descricao_breve: "Aplicação para gerenciar tarefas.",  
-      descricao_completa: "Um app simples para adicionar, remover e marcar tarefas como concluídas, usando LocalStorage para salvar os dados.", 
-      imagem: "link_para_imagem_todo.jpg", 
-      linkSite: "https://seusite.com/todolist", 
-      linkGithub: "https://github.com/seuusuario/todolist" 
+    { 
+      nome: "CineBlur", 
+      descricao_breve: "Um jogo onde você tenta adivinhar o nome do filme a partir de uma imagem borrada.",  
+      descricao_completa: "CineBlur é um jogo onde você tenta adivinhar o nome do filme a partir de uma imagem borrada. Quanto maior a dificuldade, mais borrada a imagem fica, tornando o jogo mais desafiador. A cada rodada, você pode pedir uma dica (sinopse do filme) e tem um botão de pular para avançar para a próxima rodada.", 
+      imagem: "CineBlur.png",
+      tecnologias: [
+        { icon: "js.png" },
+        { icon: "nodejs.png" },
+        { icon: "express.png" },
+        { icon: "APIs REST.png" },
+        { icon: "html.png" },
+        { icon: "css.png" }
+      ],
+      linkSite: "https://carloss0101.github.io/CineBlur/", 
+      linkGithub: "https://github.com/Carloss0101/CineBlur" 
   },
   { 
-      nome: "Galeria de Imagens", 
-      descricao_breve: "Galeria interativa com efeitos de animação.",  
-      descricao_completa: "Uma galeria que exibe imagens em grade e permite visualização em tela cheia com animações suaves e efeitos CSS.", 
-      imagem: "link_para_imagem_galeria.jpg", 
-      linkSite: "https://seusite.com/galeria", 
-      linkGithub: "https://github.com/seuusuario/galeria" 
+      nome: "Organizador Faculdade", 
+      descricao_breve: "Site para ajudar estudantes a organizar tarefas acadêmicas de forma simples e eficiente.",  
+      descricao_completa: "O Organizador de Faculdade é um site que ajuda estudantes a gerenciar suas tarefas acadêmicas de forma prática e eficiente. Com este sistema, você pode adicionar trabalhos, provas e suas respectivas datas. O site organiza suas tarefas de maneira intuitiva, facilitando o acompanhamento das atividades.", 
+      imagem: "OrgFaculdade.png", 
+      tecnologias: [
+        { icon: "js.png" },
+        { icon: "nodejs.png" },
+        { icon: "express.png" },
+        { icon: "mongo.png" },
+        { icon: "APIs REST.png" },
+        { icon: "html.png" },
+        { icon: "css.png" }
+      ],
+      linkSite: "https://www.linkedin.com/feed/update/urn:li:activity:7320219421271105536/", 
+      linkGithub: "https://github.com/Carloss0101/Organizador-Faculdade" 
   },
   { 
-      nome: "Calculadora Simples", 
-      descricao_breve: "Calculadora online básica.",  
-      descricao_completa: "Uma calculadora funcional com operações básicas (+, -, *, /) e interface responsiva.", 
-      imagem: "link_para_imagem_calculadora.jpg", 
-      linkSite: "https://seusite.com/calculadora", 
-      linkGithub: "https://github.com/seuusuario/calculadora" 
-  },
-  { 
-      nome: "Pedra, Papel e Te", 
-      descricao_breve: "Versão digital do clássico jogo.",  
-      descricao_completa: "Um jogo simples onde o usuário escolhe entre pedra, papel ou tesoura e joga contra o computador, que faz escolhas aleatórias.", 
-      imagem: "link_para_imagem_jogo.jpg", 
-      linkSite: "https://seusite.com/jogo", 
-      linkGithub: "https://github.com/seuusuario/jogo" 
+      nome: "Gerador de Senhas", 
+      descricao_breve: "Um gerador de senhas aleatórias com cópia automática e interface estilizada.",  
+      descricao_completa: "Aplicativo que gera senhas aleatórias combinando letras, números e caracteres especiais para garantir segurança. Exibe a senha gerada no centro da tela e permite copiá-la facilmente com um clique. Conta com design moderno, interface responsiva e notificações animadas para melhor usabilidade.", 
+      imagem: "GerSenhas.png",
+      tecnologias: [
+        { icon: "js.png" },
+        { icon: "html.png" },
+        { icon: "css.png" }
+      ],
+      linkSite: "https://carloss0101.github.io/Gerador-de-senhas/", 
+      linkGithub: "https://github.com/Carloss0101/Gerador-de-senhas" 
   }
 ];
+
 
 function apresentar_projetos() {
   let projetosItens = document.getElementById('projetos-itens');
@@ -64,7 +79,7 @@ function apresentar_projetos() {
       h2.textContent = projetos[indexProjeto].nome;
 
       const img = document.createElement("img");
-      img.src = `././imagens/producao.png`;
+      img.src = `././src/imagens/${projetos[indexProjeto].imagem}`;
 
       const h3 = document.createElement("h3");
       h3.classList.add("detalhes");
@@ -74,9 +89,20 @@ function apresentar_projetos() {
       const p = document.createElement("p");
       p.textContent = projetos[indexProjeto].descricao_breve;
 
+      const icons = document.createElement("div");
+      icons.id = "icons";
+      
+      for(let i = 0; i < projetos[indexProjeto].tecnologias.length; i++) {
+        const iconImg = document.createElement('img');
+        iconImg.src = `././src/imagens/${projetos[indexProjeto].tecnologias[i].icon}`;
+
+        icons.appendChild(iconImg);
+      }
+
       itemProjeto.appendChild(h2);
       itemProjeto.appendChild(img);
-      itemProjeto.appendChild(p)
+      itemProjeto.appendChild(p);
+      itemProjeto.appendChild(icons);
       itemProjeto.appendChild(h3);
 
       projetosItens.appendChild(itemProjeto);
@@ -130,7 +156,8 @@ function mostrarEmb(numero_projeto) {
 
 
   const imagem = document.createElement('img');
-  imagem.src = projetos[numero_projeto].imagem; 
+  imagem.src = `././src/imagens/${projetos[numero_projeto].imagem}`; 
+  imagem.class = 'embadImg'
   embad.appendChild(imagem);
 
 

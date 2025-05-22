@@ -280,3 +280,35 @@ footer > a {
 #embad_sair:hover {
     color: red;
   }
+
+
+#embad img {
+    max-height: 300px;
+}
+#icons {
+    margin-top: 10px;
+}
+
+#icons img {
+    max-width: 25px;
+    margin: 5px
+}
+
+#embad p {
+    margin: 10px 0px 20px 0px;
+}
+
+#embad a {
+    background-color: #FFAA00;
+    color: #010423;
+    padding: 3px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0px 10px 0px 10px;
+}
+
+#embad a:hover {
+    background-color: #010423;
+    color: white;
+    transition-duration: 0.5s;
+}

@@ -4,10 +4,14 @@
     #msg-principal > #animacao-digitacao  {
         font-size: 0.65em;
     }
-    
+
     #msg-principal > h1 {
         font-size: 0.8em;
         margin-left: 15px;
+    }
+    
+    .skill {
+        width: 120px;
     }
     #redes-sociais > a > img {
         max-width: 35px;
@@ -36,6 +40,19 @@
     #contato-email {
         font-size: 0.7em;
     }
+        #embad {
+        padding: 15px;
+    }
+
+    #embad img {
+        max-height: 200px;
+    }
+
+    #embad_sair {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
 }
 
 /* Tablet */
@@ -74,5 +91,17 @@
     }
     #contato-email {
         font-size: 1em;
+    }
+        #embad {
+        padding: 10px;
+    }
+
+    #embad img {
+        max-height: 150px;
+    }
+
+    #embad_sair {
+        padding: 5px 10px;
+        font-size: 11px;
     }
 }
