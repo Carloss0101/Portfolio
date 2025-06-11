@@ -20,11 +20,6 @@ Este é o meu portfólio pessoal, desenvolvido com **HTML**, **CSS** e **JavaScr
 - **CSS3** – estilização e animações  
 - **JavaScript** – interatividade e animações
 
-## 📸 Preview
-
-![screenshot](https://user-images.githubusercontent.com/your-image-path/portfolio-preview.png)  
-*Substitua pela captura de tela real do seu portfólio*
-
 ## 📬 Contato
 
 Se quiser entrar em contato, você pode me encontrar por meio da aba contato no site ou pelas redes sociais listadas lá.
