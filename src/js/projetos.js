@@ -39,8 +39,8 @@ const projetos = [
     imagem: "atoseamor.png", 
     tecnologias: [
     ],
-    linkSite: "https://www.atoseamor.com/eventos", 
-    linkGithub: "https://www.atoseamor.com/eventos" 
+    linkSite: "https://www.atoseamor.com/", 
+    linkGithub: "https://www.atoseamor.com/" 
   },
   { 
     nome: "Gerador de Senhas", 
