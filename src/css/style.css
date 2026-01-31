@@ -388,3 +388,34 @@ footer > a {
   line-height: 1.2;
   font-size: 0.9em;
 }
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.anim-left {
+  animation: slideLeft 0.35s ease;
+}
+
+.anim-right {
+  animation: slideRight 0.35s ease;
+}
+
